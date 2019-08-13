@@ -24,6 +24,7 @@ public class ShiroConfig {
         filtermap.put("/logout", "logout");
         filtermap.put("/", "anon");
         filtermap.put("/code/image/**","anon");
+        filtermap.put("/category","anon");
         filtermap.put("/**","authc");
 
         factoryBean.setFilterChainDefinitionMap(filtermap);
