@@ -50,6 +50,7 @@ public class userController {
         UsernamePasswordToken token =new UsernamePasswordToken(username,password);
         Subject subject= SecurityUtils.getSubject();
         try {
+
             subject.login(token);
         } catch (UnknownAccountException e) {
             return e.getMessage();
